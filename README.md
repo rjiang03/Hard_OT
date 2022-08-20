@@ -10,4 +10,8 @@ Some hyper-parameters to tune:
 
 --dataset_name: "stl10", "cifar10", "cifar100".
 
---reg: $\epsilon$ in our paper
+--reg: $\epsilon$ in our paper, when $reg \leq 0$, the method is SimCLR (baseline). To reproduce the result in table 1, 2, 3. The best value are 0.3, 0.7 and 0.7 for stl10, cifar10 and cifar100.
+
+--new_cost: To reproduce the result in Figure 4. True or False. If true: using new cost function proposed in our paper. If False: using default cost function.
+
+--kappa: $\kappa$ in our paper. To reproduce the result in Figure 4, set new_cost = True, for "cifar100": $\epsilon = 0.7, \kappa = 1$, for "stl10": $\epsilon = 0.7, \kappa = 1$.
